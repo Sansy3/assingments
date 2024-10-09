@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calcualtor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KaO-kc-Rrr">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vyI-Vy-cEs">
+                                <rect key="frame" x="223" y="261" width="131" height="57"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2,048" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXZ-1q-v2u">
+                                        <rect key="frame" x="0.99999999999999289" y="20" width="126.33333333333331" height="37"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="tXZ-1q-v2u" firstAttribute="leading" secondItem="vyI-Vy-cEs" secondAttribute="leading" constant="1" id="DAD-HA-To8"/>
+                                    <constraint firstAttribute="bottom" secondItem="tXZ-1q-v2u" secondAttribute="bottom" id="L9v-i4-w0F"/>
+                                    <constraint firstItem="tXZ-1q-v2u" firstAttribute="top" secondItem="vyI-Vy-cEs" secondAttribute="top" constant="20" id="Rxk-pq-j7a"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="120 x 3 + 608 + 1080" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20P-dM-sv1">
+                                <rect key="frame" x="161.66666666666663" y="217" width="188.33333333333337" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wbc-sh-T2n">
+                                <rect key="frame" x="0.0" y="361" width="393" height="457"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="iym-LH-R84">
+                                        <rect key="frame" x="44.666666666666657" y="36.666666666666686" width="304" height="384"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ixh-LS-ToP">
+                                                <rect key="frame" x="0.0" y="0.0" width="224" height="384"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="8hL-5Q-Wy1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="64" height="384"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRG-UI-3qU">
+                                                                <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="" image="moonSvg"/>
+                                                                <buttonConfiguration key="configuration" style="gray" image="moonSvg" title="" cornerStyle="capsule">
+                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUs-gG-NBF">
+                                                                <rect key="frame" x="0.0" y="80" width="64" height="64"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="7"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="7">
+                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcF-YK-a2C">
+                                                                <rect key="frame" x="0.0" y="159.99999999999994" width="64" height="64"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="4"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="4">
+                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhQ-SU-RNd">
+                                                                <rect key="frame" x="0.0" y="239.99999999999994" width="64" height="64"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="1"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="1">
+                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7H-7J-EIW">
+                                                                <rect key="frame" x="0.0" y="319.99999999999994" width="64" height="64"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="AC"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="AC">
+                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zpm-Dv-sKX">
+                                                        <rect key="frame" x="80" y="0.0" width="64" height="384"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYe-NF-2xv">
+                                                                <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="" image="percentSvg"/>
+                                                                <buttonConfiguration key="configuration" style="gray" image="percentSvg" title="" cornerStyle="capsule"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nq4-Tm-GhL">
+                                                                <rect key="frame" x="0.0" y="80" width="64" height="64"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="8"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="8">
+                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHK-yE-B3l">
+                                                                <rect key="frame" x="0.0" y="159.99999999999994" width="64" height="64"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="5"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="5">
+                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0CO-zY-EXO">
+                                                                <rect key="frame" x="0.0" y="239.99999999999994" width="64" height="64"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="2"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="2">
+                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJm-GO-SNv">
+                                                                <rect key="frame" x="0.0" y="319.99999999999994" width="64" height="64"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="0"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="0">
+                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="jqO-7W-YNv">
+                                                        <rect key="frame" x="160" y="0.0" width="64" height="384"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idx-vY-HNl">
+                                                                <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="" image="divideSvg (1)"/>
+                                                                <buttonConfiguration key="configuration" style="gray" image="divideSvg (1)" title="" cornerStyle="capsule"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9p-jx-rgC">
+                                                                <rect key="frame" x="0.0" y="80" width="64" height="64"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="9"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="9">
+                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qb-Lq-g8l">
+                                                                <rect key="frame" x="0.0" y="159.99999999999994" width="64" height="64"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="6"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="6">
+                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3j4-TX-Ixq">
+                                                                <rect key="frame" x="0.0" y="239.99999999999994" width="64" height="64"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="3"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="3">
+                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STV-Bu-aPn">
+                                                                <rect key="frame" x="0.0" y="319.99999999999994" width="64" height="64"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="."/>
+                                                                <buttonConfiguration key="configuration" style="plain" title=".">
+                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="J8e-DP-FB0">
+                                                <rect key="frame" x="240" y="0.0" width="64" height="384"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="j4J-Sd-aDt">
+                                                        <rect key="frame" x="0.0" y="0.0" width="64" height="224"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfv-2o-Vvk">
+                                                                <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="64" id="eFG-ky-6Ag"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="gray" image="multipleSvg (2)" title="" cornerStyle="capsule" buttonSize="mini"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m87-Y6-QL8">
+                                                                <rect key="frame" x="0.0" y="80" width="64" height="64"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="64" id="nF1-3j-cdf"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="gray" image="decrement" title="" cornerStyle="capsule" buttonSize="mini"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5D-1X-XT4">
+                                                                <rect key="frame" x="0.0" y="159.99999999999994" width="64" height="64"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="64" id="apX-HV-YuI"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="gray" image="increment" title="" cornerStyle="capsule" buttonSize="mini"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sDv-2M-pvg">
+                                                        <rect key="frame" x="0.0" y="239.99999999999994" width="64" height="144"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iE4-7X-FcJ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="64" height="144"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="64" id="G9q-fU-vuc"/>
+                                                                    <constraint firstAttribute="height" constant="144" id="agY-Vt-Pip"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="gray" title="=" cornerStyle="capsule" buttonSize="large"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="iym-LH-R84" firstAttribute="leading" secondItem="Wbc-sh-T2n" secondAttribute="leading" constant="44.5" id="NKt-Ee-KHZ"/>
+                                    <constraint firstItem="iym-LH-R84" firstAttribute="top" secondItem="Wbc-sh-T2n" secondAttribute="top" constant="36.5" id="UTQ-Ml-NpT"/>
+                                    <constraint firstAttribute="trailing" secondItem="iym-LH-R84" secondAttribute="trailing" constant="44.5" id="q3F-yr-UQA"/>
+                                    <constraint firstAttribute="bottom" secondItem="iym-LH-R84" secondAttribute="bottom" constant="36.5" id="wSZ-oh-eQq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c6i-zB-xbM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wbc-sh-T2n" firstAttribute="top" secondItem="c6i-zB-xbM" secondAttribute="top" constant="302" id="9wA-Jh-mF3"/>
+                            <constraint firstItem="Wbc-sh-T2n" firstAttribute="top" secondItem="vyI-Vy-cEs" secondAttribute="bottom" constant="43" id="GHr-w4-HMI"/>
+                            <constraint firstItem="Wbc-sh-T2n" firstAttribute="leading" secondItem="KaO-kc-Rrr" secondAttribute="leading" id="KDe-qB-TQi"/>
+                            <constraint firstItem="c6i-zB-xbM" firstAttribute="trailing" secondItem="20P-dM-sv1" secondAttribute="trailing" constant="43" id="iMI-Ix-Yn1"/>
+                            <constraint firstItem="c6i-zB-xbM" firstAttribute="trailing" secondItem="Wbc-sh-T2n" secondAttribute="trailing" id="lkr-N5-1GH"/>
+                            <constraint firstItem="c6i-zB-xbM" firstAttribute="trailing" secondItem="vyI-Vy-cEs" secondAttribute="trailing" constant="39" id="pCO-GE-KdT"/>
+                            <constraint firstItem="c6i-zB-xbM" firstAttribute="bottom" secondItem="Wbc-sh-T2n" secondAttribute="bottom" id="pps-qu-Qis"/>
+                            <constraint firstItem="20P-dM-sv1" firstAttribute="top" relation="lessThanOrEqual" secondItem="c6i-zB-xbM" secondAttribute="top" constant="158" id="s03-R9-z7G"/>
+                            <constraint firstItem="vyI-Vy-cEs" firstAttribute="top" secondItem="c6i-zB-xbM" secondAttribute="top" constant="202" id="y61-yh-Edc"/>
+                            <constraint firstItem="vyI-Vy-cEs" firstAttribute="leading" secondItem="c6i-zB-xbM" secondAttribute="leading" constant="223" id="z3G-06-wGC"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="decrement" width="20" height="2"/>
+        <image name="divideSvg (1)" width="20" height="20"/>
+        <image name="increment" width="20" height="20"/>
+        <image name="moonSvg" width="20" height="20"/>
+        <image name="multipleSvg (2)" width="18" height="18"/>
+        <image name="percentSvg" width="20" height="20"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
