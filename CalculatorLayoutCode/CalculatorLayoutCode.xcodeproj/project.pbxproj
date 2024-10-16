@@ -12,6 +12,7 @@
 		C14FC73A2CBC0BC500366FCC /* CalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FC7392CBC0BC500366FCC /* CalculatorVC.swift */; };
 		C14FC73F2CBC0BC600366FCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C14FC73E2CBC0BC600366FCC /* Assets.xcassets */; };
 		C14FC7422CBC0BC600366FCC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C14FC7412CBC0BC600366FCC /* Base */; };
+		C1A233432CBFF8B4000442A3 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A233422CBFF8B4000442A3 /* HistoryVC.swift */; };
 		C1EA95242CBC734800F7088C /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA95232CBC734800F7088C /* SettingsVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		C14FC7432CBC0BC600366FCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C14FC7482CBC0BC600366FCC /* CalculatorLayoutCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorLayoutCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C14FC7522CBC0BC600366FCC /* CalculatorLayoutCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorLayoutCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1A233422CBFF8B4000442A3 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
 		C1EA95232CBC734800F7088C /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +100,7 @@
 				C14FC73E2CBC0BC600366FCC /* Assets.xcassets */,
 				C14FC7402CBC0BC600366FCC /* LaunchScreen.storyboard */,
 				C14FC7432CBC0BC600366FCC /* Info.plist */,
+				C1A233422CBFF8B4000442A3 /* HistoryVC.swift */,
 			);
 			path = CalculatorLayoutCode;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C14FC73A2CBC0BC500366FCC /* CalculatorVC.swift in Sources */,
+				C1A233432CBFF8B4000442A3 /* HistoryVC.swift in Sources */,
 				C1EA95242CBC734800F7088C /* SettingsVC.swift in Sources */,
 				C14FC7362CBC0BC500366FCC /* AppDelegate.swift in Sources */,
 				C14FC7382CBC0BC500366FCC /* SceneDelegate.swift in Sources */,
