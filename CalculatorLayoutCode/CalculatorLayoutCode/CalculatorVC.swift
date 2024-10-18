@@ -301,8 +301,8 @@ class CalculatorVC: UIViewController {
             UIColor(red: 0.93, green: 0.05, blue: 0.60, alpha: 1).cgColor,
             UIColor(red: 0.99, green: 0.35, blue: 0.18, alpha: 1).cgColor
         ]
-        gradientLayer.startPoint = CGPoint(x: 0, y: 0)  // Top-left
-        gradientLayer.endPoint = CGPoint(x: 1, y: 1)    // Bottom-right
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)  
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
         gradientLayer.cornerRadius = button19.layer.cornerRadius
         button19.layer.insertSublayer(gradientLayer, at: 0)
         
@@ -364,9 +364,11 @@ class CalculatorVC: UIViewController {
     
     
     private func evaluateExpression(expression: String) -> Double {
-        let multiply = expression.replacingOccurrences(of: "x", with: "*")
+        let multiplyandpercent = expression
+            .replacingOccurrences(of: "x", with: "*")
+            .replacingOccurrences(of: "%", with: "*0.01")
         
-        let expression = NSExpression(format: multiply)
+        let expression = NSExpression(format: multiplyandpercent)
         if let result = expression.expressionValue(with: nil, context: nil) as? NSNumber {
             return result.doubleValue
         } else {
@@ -400,6 +402,4 @@ class CalculatorVC: UIViewController {
     }
     
 }
-////dDSDNSDnad
-
 
