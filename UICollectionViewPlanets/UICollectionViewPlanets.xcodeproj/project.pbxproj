@@ -10,12 +10,14 @@
 		C1A04EAE2CC5827D008F8882 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A04EAD2CC5827D008F8882 /* AppDelegate.swift */; };
 		C1A04EB02CC5827D008F8882 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A04EAF2CC5827D008F8882 /* SceneDelegate.swift */; };
 		C1A04EB22CC5827D008F8882 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A04EB12CC5827D008F8882 /* ViewController.swift */; };
-		C1A04EB52CC5827D008F8882 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C1A04EB42CC5827D008F8882 /* Base */; };
 		C1A04EB72CC5827E008F8882 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1A04EB62CC5827E008F8882 /* Assets.xcassets */; };
 		C1A04EBA2CC5827E008F8882 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C1A04EB92CC5827E008F8882 /* Base */; };
 		C1A04EC52CC5827E008F8882 /* UICollectionViewPlanetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A04EC42CC5827E008F8882 /* UICollectionViewPlanetsTests.swift */; };
 		C1A04ECF2CC5827E008F8882 /* UICollectionViewPlanetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A04ECE2CC5827E008F8882 /* UICollectionViewPlanetsUITests.swift */; };
 		C1A04ED12CC5827E008F8882 /* UICollectionViewPlanetsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A04ED02CC5827E008F8882 /* UICollectionViewPlanetsUITestsLaunchTests.swift */; };
+		C1A04EE32CC5A3D1008F8882 /* PlanetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1A04EE22CC5A3D1008F8882 /* PlanetCell.xib */; };
+		C1A04EE42CC5A3D1008F8882 /* PlanetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A04EE12CC5A3D1008F8882 /* PlanetCell.swift */; };
+		C1A04EE62CC640C7008F8882 /* DetailsforMarsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A04EE52CC640C7008F8882 /* DetailsforMarsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +42,6 @@
 		C1A04EAD2CC5827D008F8882 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1A04EAF2CC5827D008F8882 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C1A04EB12CC5827D008F8882 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C1A04EB42CC5827D008F8882 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C1A04EB62CC5827E008F8882 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1A04EB92CC5827E008F8882 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1A04EBB2CC5827E008F8882 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		C1A04ECA2CC5827E008F8882 /* UICollectionViewPlanetsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UICollectionViewPlanetsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1A04ECE2CC5827E008F8882 /* UICollectionViewPlanetsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewPlanetsUITests.swift; sourceTree = "<group>"; };
 		C1A04ED02CC5827E008F8882 /* UICollectionViewPlanetsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewPlanetsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C1A04EE12CC5A3D1008F8882 /* PlanetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCell.swift; sourceTree = "<group>"; };
+		C1A04EE22CC5A3D1008F8882 /* PlanetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanetCell.xib; sourceTree = "<group>"; };
+		C1A04EE52CC640C7008F8882 /* DetailsforMarsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsforMarsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +106,9 @@
 				C1A04EAD2CC5827D008F8882 /* AppDelegate.swift */,
 				C1A04EAF2CC5827D008F8882 /* SceneDelegate.swift */,
 				C1A04EB12CC5827D008F8882 /* ViewController.swift */,
-				C1A04EB32CC5827D008F8882 /* Main.storyboard */,
+				C1A04EE52CC640C7008F8882 /* DetailsforMarsVC.swift */,
+				C1A04EE12CC5A3D1008F8882 /* PlanetCell.swift */,
+				C1A04EE22CC5A3D1008F8882 /* PlanetCell.xib */,
 				C1A04EB62CC5827E008F8882 /* Assets.xcassets */,
 				C1A04EB82CC5827E008F8882 /* LaunchScreen.storyboard */,
 				C1A04EBB2CC5827E008F8882 /* Info.plist */,
@@ -232,8 +238,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1A04EB72CC5827E008F8882 /* Assets.xcassets in Resources */,
+				C1A04EE32CC5A3D1008F8882 /* PlanetCell.xib in Resources */,
 				C1A04EBA2CC5827E008F8882 /* Base in Resources */,
-				C1A04EB52CC5827D008F8882 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +265,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1A04EB22CC5827D008F8882 /* ViewController.swift in Sources */,
+				C1A04EE62CC640C7008F8882 /* DetailsforMarsVC.swift in Sources */,
 				C1A04EAE2CC5827D008F8882 /* AppDelegate.swift in Sources */,
 				C1A04EB02CC5827D008F8882 /* SceneDelegate.swift in Sources */,
+				C1A04EE42CC5A3D1008F8882 /* PlanetCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +305,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C1A04EB32CC5827D008F8882 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C1A04EB42CC5827D008F8882 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C1A04EB82CC5827E008F8882 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -446,7 +446,7 @@
 				INFOPLIST_FILE = UICollectionViewPlanets/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -473,7 +473,6 @@
 				INFOPLIST_FILE = UICollectionViewPlanets/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
