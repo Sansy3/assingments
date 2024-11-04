@@ -9,10 +9,10 @@ import UIKit
 
 class PlanetCell: UICollectionViewCell {
     
-    private let planetImageView: UIImageView = UIImageView()
-    private let nameLabel: UILabel = UILabel()
-    private let massLabel: UILabel = UILabel()
-    private let starImg: UIImageView = UIImageView()
+     let planetImageView: UIImageView = UIImageView()
+     let nameLabel: UILabel = UILabel()
+     let massLabel: UILabel = UILabel()
+     let starImg: UIImageView = UIImageView()
     let starButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "Starempty"), for: .normal)
@@ -85,19 +85,7 @@ class PlanetCell: UICollectionViewCell {
     }
     
     
-    func configure(with imageName: String) {
-        planetImageView.image = UIImage(named: imageName)
-    }
-    func configureName(with Name: String) {
-        nameLabel.text = Name
-    }
-    func configuremass(with Mass: String) {
-        massLabel.text = Mass
-    }
-    func configurestar(with star: String) {
-        starImg.image = UIImage(named: star)
-    }
-    
+  
     func toggleFavourite() {
         isFavourite = !isFavourite
         updateStar()

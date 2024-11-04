@@ -31,7 +31,7 @@ class Planet {
 var planets = [Planet(name: "Mercury", area: "74,800,000 km2", temperatrue: "167°C", mass: "3.30 × 10²³ kg", image:"Mercury", star: "Star", isFavourite: false),
                Planet(name: "Venus", area: "460,000,000 km²", temperatrue: "464°C", mass: "4.87 × 10²⁴ kg", image: "Venus", star: "Star",isFavourite: false),
                Planet(name: "Earth", area: "510,100,100 km2", temperatrue: "15°C", mass: "5.97 × 10²⁴ kg", image: "Earth", star: "Star",isFavourite: false),
-               Planet(name: "Mars", area: "144,800,000 km²", temperatrue: "−18°C", mass: "6.42 × 10²³ kg", image:"Mars1", star: "Star",isFavourite: false),
+               Planet(name: "Mars", area: "144,800,000 km²", temperatrue: "−18°C", mass: "6.42 × 10²³ kg", image:"mars", star: "Star",isFavourite: false),
                 Planet(name: "Jupiter", area: "6,142E10 km²", temperatrue: "−108°C", mass: "1.90 × 10²⁷ kg", image:"Jupiter", star: "Star",isFavourite: false),
                 Planet(name: "Uranus", area: "8,083E9 km²", temperatrue: "−195°C", mass: "8.68 × 10²⁵ kg", image: "Uranus", star: "Star",isFavourite: false),
               ]
@@ -104,10 +104,10 @@ extension PlanetsVC: UICollectionViewDataSource,UICollectionViewDelegateFlowLayo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlanetCell", for: indexPath) as? PlanetCell
         let planet = planets[indexPath.row]
-        cell?.configure(with: planet.image)
-        cell?.configureName(with: planet.name)
-        cell?.configuremass(with: planet.area)
-        cell?.configurestar(with: planet.star)
+        cell?.massLabel.text = planet.area
+        cell?.nameLabel.text = planet.name
+        cell?.planetImageView.image = UIImage(named: planet.image)
+        cell?.starImg.image = UIImage(named: "Star")
         return cell ?? UICollectionViewCell()
     }
     
@@ -126,13 +126,13 @@ extension PlanetsVC: UICollectionViewDataSource,UICollectionViewDelegateFlowLayo
         
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let currentPlanet = planets[indexPath.row]
+        let planet = planets[indexPath.row]
         let vc = DetailsforMarsVC()
-        vc.titleLable.text = currentPlanet.name
-        vc.labelarea.text = "Area                                  \(currentPlanet.area)"
-        vc.mass.text = "Mass                                    \(currentPlanet.mass)"
-        vc.Temperature.text = "Temperature                                    \(currentPlanet.temperatrue)"
-        vc.bigMars.image = UIImage(named: currentPlanet.image)
+        vc.titleLable.text = planet.name
+        vc.labelarea.text = "Area                                  \(planet.area)"
+        vc.mass.text = "Mass                                    \(planet.mass)"
+        vc.Temperature.text = "Temperature                                    \(planet.temperatrue)"
+        vc.bigMars.image = UIImage(named: planet.image)
         navigationController?.pushViewController(vc, animated: true)
         
         }
