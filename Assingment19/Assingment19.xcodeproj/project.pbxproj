@@ -360,8 +360,6 @@
 		C1AE69E52CD2934D003A4814 /* NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf"; sourceTree = "<group>"; };
 		C1AE69E62CD2934D003A4814 /* OFL.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		C1AE69E72CD2934D003A4814 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
-		C1F050B32CE2266E008414C9 /* MyLibrary */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MyLibrary; path = "/Users/beqa/Desktop/sandro/untitled folder 5/MyLibrary"; sourceTree = "<absolute>"; };
-		C1F050E12CE22FE7008414C9 /* Formatting */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Formatting; path = "/Users/beqa/Desktop/sandro/untitled folder 5/Formatting"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -425,8 +423,6 @@
 		C1AE67922CD2412D003A4814 = {
 			isa = PBXGroup;
 			children = (
-				C1F050E12CE22FE7008414C9 /* Formatting */,
-				C1F050B32CE2266E008414C9 /* MyLibrary */,
 				C1AE679D2CD2412D003A4814 /* Assingment19 */,
 				C1AE67B42CD2412E003A4814 /* Assingment19Tests */,
 				C1AE67BE2CD2412F003A4814 /* Assingment19UITests */,
@@ -738,6 +734,7 @@
 			mainGroup = C1AE67922CD2412D003A4814;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				C1872CC02CE2428000A1E662 /* XCRemoteSwiftPackageReference "Networking-" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C1AE679C2CD2412D003A4814 /* Products */;
@@ -1256,6 +1253,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C1872CC02CE2428000A1E662 /* XCRemoteSwiftPackageReference "Networking-" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Sansy3/Networking-.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		C1F050B52CE228FD008414C9 /* MyLibrary */ = {

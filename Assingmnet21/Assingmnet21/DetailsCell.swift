@@ -1,88 +1,76 @@
-//
-//  DetailsCell.swift
-//  Assingmnet21
-//
-//  Created by beqa on 04.11.24.
-//
+
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+class DetailsCell: UITableViewCell {
 
-class DetailsCell: UICollectionViewController {
+    private let questionView = UIView()
+    private let circleImage = UIImageView()
+    private let answerLabel = UILabel()
+    private let questionColor = UIColor(red: 142/255, green: 132/255, blue: 255/255, alpha: 1)
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setupUI()
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    // MARK: UICollectionViewDataSource
-
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
 
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
-        // Configure the cell
+    private func setupUI() {
+        
+        
+        contentView.addSubview(circleImage)
+        circleImage.translatesAutoresizingMaskIntoConstraints = false
+        circleImage.image = UIImage(named: "circle")
+        
+        contentView.addSubview(answerLabel)
+        answerLabel.translatesAutoresizingMaskIntoConstraints = false
+        answerLabel.textColor = .black
+        answerLabel.font = UIFont(name: "Sen", size: 16)
+
+        NSLayoutConstraint.activate([
+            
+            
+            circleImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
+            circleImage.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            circleImage.heightAnchor.constraint(equalToConstant: 19),
+            circleImage.widthAnchor.constraint(equalToConstant: 19),
+            
+            answerLabel.leadingAnchor.constraint(equalTo: circleImage.trailingAnchor, constant: 10),
+            answerLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            answerLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15)
+            
+        ])
+    }
     
-        return cell
+    func configure(with answer: String) {
+        
+        answerLabel.text = answer
+        resetImage()
     }
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
     
+    func resetImage() {
+        circleImage.image = UIImage(named: "circle")
+        answerLabel.textColor = .black
+        contentView.backgroundColor = .clear
     }
-    */
+    
+    func updateForCorrectAnswer() {
+        circleImage.image = UIImage(named: "correctAnswer")
+        contentView.backgroundColor = questionColor
+    }
+    
+    func updateForIncorrectAnswer() {
+        circleImage.image = UIImage(named: "incorrectAnswer")
+        contentView.backgroundColor = questionColor
+    }
 
 }
