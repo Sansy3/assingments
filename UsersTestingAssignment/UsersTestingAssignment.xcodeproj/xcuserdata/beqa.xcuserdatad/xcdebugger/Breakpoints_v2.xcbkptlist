@@ -55,32 +55,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D0FFBB72-887D-4010-B23F-F4835D0D69E4"
+            uuid = "928C22D7-6897-4470-AD22-B03010309061"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UsersTestingAssignmentTests/TestNetworkmanager.swift"
+            filePath = "UsersTestingAssignmentTests/celltest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "testFetchUsers_Success()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "52A010B5-BAD8-4DF4-B204-8EA23AC8E2C4"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "UsersTestingAssignmentTests/TestNetworkmanager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "testFetchUsers_Failure()"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "testConfigureWithUserViewModel()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

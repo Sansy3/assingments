@@ -9,27 +9,27 @@ import UIKit
 
 class UserCell: UITableViewCell {
     
-    private let userNameLabel: UILabel = {
+    public let userNameLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 16, weight: .bold)
         return label
     }()
     
-    private let contactNumberLabel: UILabel = {
+    public let contactNumberLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 14)
         label.textColor = .darkGray
         return label
     }()
     
-    private let emailLabel: UILabel = {
+    public let emailLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 14)
         label.textColor = .lightGray
         return label
     }()
     
-    private let profileImageView: UIImageView = {
+    public let profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 30
         imageView.clipsToBounds = true
@@ -37,7 +37,7 @@ class UserCell: UITableViewCell {
         return imageView
     }()
     
-    private var userViewModel: UserViewModel?
+    public var userViewModel: UserViewModel?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -48,6 +48,24 @@ class UserCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
+    func getUserNameLabel() -> UILabel {
+        return userNameLabel
+    }
+    
+    func getContactNumberLabel() -> UILabel {
+        return contactNumberLabel
+    }
+    
+    func getEmailLabel() -> UILabel {
+        return emailLabel
+    }
+    
+    func getProfileImageView() -> UIImageView {
+        return profileImageView
+    }
+    
     
     private func setupViews() {
         addSubview(profileImageView)
@@ -101,7 +119,7 @@ class UserCell: UITableViewCell {
         }
     }
     
-    private func loadImage(from url: URL, session: URLSessionProtocol = URLSession.shared) {
+    public func loadImage(from url: URL, session: URLSessionProtocol = URLSession.shared) {
         session.dataTask(with: url) { [weak self] data, response, error in
             guard let self = self, let data = data, error == nil else {
                 return
