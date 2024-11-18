@@ -8,18 +8,22 @@ class LoginViewController: UIViewController {
     
     private let iconImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "person.circle.fill")
-        imageView.tintColor = .white
-        imageView.contentMode = .scaleAspectFit
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
+            imageView.image = UIImage(systemName: "person")
+        imageView.tintColor = .black
+        imageView.backgroundColor = .white
+            imageView.contentMode = .scaleAspectFit
+            imageView.translatesAutoresizingMaskIntoConstraints = false
+            imageView.layer.cornerRadius = 40 
+            imageView.layer.masksToBounds = true
+            return imageView
     }()
+    
     
     private let usernameLabel: UILabel = {
         let label = UILabel()
         label.text = "Username"
         label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont(name: "Sen", size: 16)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -28,7 +32,7 @@ class LoginViewController: UIViewController {
         let label = UILabel()
         label.text = "Password"
         label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont(name: "Sen", size: 16)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -37,48 +41,58 @@ class LoginViewController: UIViewController {
         let label = UILabel()
         label.text = "Confirm Password"
         label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont(name: "Sen", size: 16)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     private let usernameTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Enter username"
         textField.backgroundColor = UIColor(white: 1.0, alpha: 0.2)
         textField.layer.cornerRadius = 8
         textField.textColor = .white
-        textField.font = UIFont.systemFont(ofSize: 16)
+        textField.font = UIFont(name: "Sen", size: 16)
         textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.attributedPlaceholder = NSAttributedString(
+                string: " Enter username",
+                attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.7)]
+            )
         return textField
+        
     }()
     
     private let passwordTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Enter password"
         textField.backgroundColor = UIColor(white: 1.0, alpha: 0.2)
         textField.layer.cornerRadius = 8
         textField.textColor = .white
-        textField.font = UIFont.systemFont(ofSize: 16)
+        textField.font = UIFont(name: "Sen", size: 16)
         textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.attributedPlaceholder = NSAttributedString(
+                string: " Enter password",
+                attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.7)]
+            )
         return textField
     }()
     
     private let confirmPasswordTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Enter password"
         textField.backgroundColor = UIColor(white: 1.0, alpha: 0.2)
         textField.layer.cornerRadius = 8
         textField.textColor = .white
-        textField.font = UIFont.systemFont(ofSize: 16)
+        textField.font = UIFont(name: "Sen", size: 16)
         textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.attributedPlaceholder = NSAttributedString(
+                string: " Enter password",
+                attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.7)]
+            )
         return textField
     }()
     
     private let loginButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Login", for: .normal)
-        button.backgroundColor = UIColor.systemPurple
+        button.backgroundColor = UIColor(red: 142/255, green: 132/255, blue: 255/255, alpha: 1)
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 8
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
@@ -90,7 +104,10 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         loadDetailsOfData()
+        applyGradientBackground()
     }
+    
+ 
     
 
     private func setupUI() {
@@ -104,12 +121,21 @@ class LoginViewController: UIViewController {
         view.addSubview(confirmPasswordLabel)
         view.addSubview(confirmPasswordTextField)
         view.addSubview(loginButton)
+
+        
+        
+
+        iconImageView.layer.cornerRadius = 50
+            iconImageView.layer.masksToBounds = true
+            iconImageView.layer.borderWidth = 2
+            iconImageView.layer.borderColor = UIColor.white.cgColor
+        iconImageView.backgroundColor = .white
         
         NSLayoutConstraint.activate([
             iconImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),
             iconImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            iconImageView.widthAnchor.constraint(equalToConstant: 80),
-            iconImageView.heightAnchor.constraint(equalToConstant: 80),
+            iconImageView.widthAnchor.constraint(equalToConstant: 104),
+            iconImageView.heightAnchor.constraint(equalToConstant: 98.21),
             
             usernameLabel.topAnchor.constraint(equalTo: iconImageView.bottomAnchor, constant: 40),
             usernameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
@@ -157,7 +183,9 @@ class LoginViewController: UIViewController {
     @objc private func loginButtonTapped() {
         guard let username = usernameTextField.text,
               let password = passwordTextField.text,
-              let confirmPassword = confirmPasswordTextField.text else { return }
+              let confirmPassword = confirmPasswordTextField.text
+        
+        else { return }
         
         
         if password != confirmPassword {
@@ -171,11 +199,23 @@ class LoginViewController: UIViewController {
             print("Details saved!")
             
             
+            
         } catch {
+            
             print("Failed to save data: \(error)")
         }
+        let homeVC = Quizz()
+                   navigationController?.pushViewController(homeVC, animated: true)
         
+        
+                
     }
+    
+    
     
 }
 
+
+#Preview{
+    LoginViewController()
+}

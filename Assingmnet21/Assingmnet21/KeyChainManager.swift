@@ -33,7 +33,7 @@ class KeychainManager {
         }
         
         let password = String(decoding: data, as: UTF8.self)
-        print(password, "🟢")
+        print("Password retrieved: \(password)")
     }
     
     func save(
@@ -81,6 +81,16 @@ class KeychainManager {
         return result as? Data
     }
     
+    func reset(service: String) throws {
+        let query: [String: AnyObject] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String: service as AnyObject
+        ]
+        let status = SecItemDelete(query as CFDictionary)
+        guard status == errSecSuccess || status == errSecItemNotFound else {
+            throw KeyChainError.KCErrorWithCode(Int(status))
+        }
+    }
 //    func update(password: Data, service: String, account: String) throws {
 //        let query: [String: AnyObject] = [
 //            kSecClass as String: kSecClassGenericPassword,
@@ -107,18 +117,18 @@ class KeychainManager {
 //        
 //    }
 //    
-//    func deletePassword(service: String, account: String) throws {
-//        let query: [String: AnyObject] = [
-//            kSecAttrService as String: service as AnyObject,
-//            kSecAttrAccount as String: account as AnyObject,
-//            kSecClass as String: kSecClassGenericPassword
-//        ]
-//        
-//        let status = SecItemDelete(query as CFDictionary)
-//        
-//        guard status == errSecSuccess else {
-//            throw KeyChainError.KCErrorWithCode(Int(status))
-//        }
-//    }
+    func deletePassword(service: String, account: String) throws {
+        let query: [String: AnyObject] = [
+            kSecAttrService as String: service as AnyObject,
+            kSecAttrAccount as String: account as AnyObject,
+            kSecClass as String: kSecClassGenericPassword
+        ]
+        
+        let status = SecItemDelete(query as CFDictionary)
+        
+        guard status == errSecSuccess else {
+            throw KeyChainError.KCErrorWithCode(Int(status))
+        }
+    }
     
 }

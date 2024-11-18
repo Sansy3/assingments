@@ -1,9 +1,3 @@
-//
-//  SceneDelegate.swift
-//  Assingmnet21
-//
-//  Created by beqa on 03.11.24.
-//
 
 import UIKit
 
@@ -19,7 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 
                 window = UIWindow(windowScene: windowScene)
                 
-                if Storedinkey() {
+                if isUserAuthenticated() {
                     let mainViewController = Quizz()
                     window?.rootViewController = UINavigationController(rootViewController: mainViewController)
                 } else {
@@ -30,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 window?.makeKeyAndVisible()
             }
     
-    private func Storedinkey() -> Bool {
+    private func isUserAuthenticated() -> Bool {
            guard let usernameData = keychainManager.get(service: "some service", account: "username"),
                  let passwordData = keychainManager.get(service: "some service", account: "password") else
            {

@@ -10,7 +10,9 @@ class QuizzCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
+        
     }
+    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -34,12 +36,13 @@ class QuizzCell: UITableViewCell {
         View.backgroundColor = .white
         View.layer.cornerRadius = 12
     }
-   
+ 
     
     
     
     private func SetupLabel() {
         View.addSubview(Numberlabel)
+        Numberlabel.font = UIFont(name: "Sen", size: 16)
         Numberlabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
