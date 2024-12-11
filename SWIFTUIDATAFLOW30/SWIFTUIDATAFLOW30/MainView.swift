@@ -1,0 +1,74 @@
+import SwiftUI
+
+struct MainView: View {
+    @StateObject private var viewModel = TimerListViewModel()
+    
+    @State private var name: String = ""
+    @State private var hours: Int = 0
+    @State private var minutes: Int = 0
+    @State private var seconds: Int = 0
+    
+    var body: some View {
+        NavigationView {
+            VStack {
+                List {
+                    ForEach(viewModel.timers.indices, id: \.self) { index in
+                        TimerView(timer: viewModel.timers[index], onDelete: {
+                            viewModel.removeTimer(at: index)
+                        })
+                        .listRowBackground(Color(red: 44/255, green: 44/255, blue: 44/255))
+                    }
+                    .onDelete { indexSet in
+                        indexSet.forEach { viewModel.removeTimer(at: $0) }
+                    }
+                }
+                .listStyle(PlainListStyle())
+                
+                VStack(spacing: 10) {
+                    TextField("ტაიმერის სახელი...", text: $name)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding(.horizontal)
+                    
+                    HStack {
+                        TextField("სთ", value: $hours, formatter: numberFormatter())
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                        TextField("წთ", value: $minutes, formatter: numberFormatter())
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                        TextField("წმ", value: $seconds, formatter: numberFormatter())
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                    }
+                    .padding(.horizontal)
+                    
+                    Button(action: {
+                        guard !name.isEmpty else { return }
+                        viewModel.addTimer(name: name, hours: hours, minutes: minutes, seconds: seconds)
+                        name = ""
+                        hours = 0
+                        minutes = 0
+                        seconds = 0
+                    }) {
+                        Text("დამატება")
+                            .padding()
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    }
+                }
+                .padding()
+            }
+            .navigationTitle("ტაიმერები")
+            .background(Color(red: 44/255, green: 44/255, blue: 44/255))
+            
+            
+        }
+        .background(Color(red: 44/255, green: 44/255, blue: 44/255))
+    }
+    
+    private func numberFormatter() -> NumberFormatter {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .none
+        formatter.maximum = 59
+        formatter.minimum = 0
+        return formatter
+    }
+}
