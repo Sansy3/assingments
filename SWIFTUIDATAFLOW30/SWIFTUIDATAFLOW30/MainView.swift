@@ -13,9 +13,11 @@ struct MainView: View {
             VStack {
                 List {
                     ForEach(viewModel.timers.indices, id: \.self) { index in
-                        TimerView(timer: viewModel.timers[index], onDelete: {
-                            viewModel.removeTimer(at: index)
-                        })
+                        NavigationLink(destination: ActivityDetailsView(timer: viewModel.timers[index])) {
+                            TimerView(timer: viewModel.timers[index], onDelete: {
+                                viewModel.removeTimer(at: index)
+                            })
+                        }
                         .listRowBackground(Color(red: 44/255, green: 44/255, blue: 44/255))
                     }
                     .onDelete { indexSet in
@@ -58,10 +60,7 @@ struct MainView: View {
             }
             .navigationTitle("ტაიმერები")
             .background(Color(red: 44/255, green: 44/255, blue: 44/255))
-            
-            
         }
-        .background(Color(red: 44/255, green: 44/255, blue: 44/255))
     }
     
     private func numberFormatter() -> NumberFormatter {
