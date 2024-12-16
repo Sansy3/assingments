@@ -12,4 +12,10 @@ class TimerListViewModel: ObservableObject {
         timers[index].delete()
         timers.remove(at: index)
     }
+    func addQuickTimer(name: String, duration: TimeInterval) {
+        let hours = Int(duration) / 3600
+        let minutes = (Int(duration) % 3600) / 60
+        let seconds = Int(duration) % 60
+        addTimer(name: name, hours: hours, minutes: minutes, seconds: seconds)
+    }
 }
