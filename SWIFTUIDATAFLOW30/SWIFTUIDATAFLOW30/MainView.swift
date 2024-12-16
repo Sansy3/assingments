@@ -7,7 +7,7 @@ struct MainView: View {
     @State private var minutes: Int = 0
     @State private var seconds: Int = 0
     
-    @State private var isBottomSheetPresented = false // State for Bottom Sheet
+    @State private var isBottomSheetPresented = false 
     
     var body: some View {
         NavigationView {
