@@ -2,11 +2,12 @@ import SwiftUI
 
 struct MainView: View {
     @StateObject private var viewModel = TimerListViewModel()
-    
     @State private var name: String = ""
     @State private var hours: Int = 0
     @State private var minutes: Int = 0
     @State private var seconds: Int = 0
+    
+    @State private var isBottomSheetPresented = false 
     
     var body: some View {
         NavigationView {
@@ -59,7 +60,20 @@ struct MainView: View {
                 .padding()
             }
             .navigationTitle("ტაიმერები")
+            .navigationBarItems(trailing: Button(action: {
+                isBottomSheetPresented = true
+            }) {
+                Image(systemName: "plus")
+                    .foregroundColor(.white)
+                    .font(.title2)
+            })
             .background(Color(red: 44/255, green: 44/255, blue: 44/255))
+            .sheet(isPresented: $isBottomSheetPresented) {
+                QuickTimerSheetView(isPresented: $isBottomSheetPresented, onTimerSelect: { timerName, duration in
+                    viewModel.addQuickTimer(name: timerName, duration: duration)
+                })
+                .presentationDetents([.medium, .large])
+            }
         }
     }
     
