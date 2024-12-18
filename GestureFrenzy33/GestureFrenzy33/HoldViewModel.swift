@@ -11,7 +11,6 @@ class HoldViewModel: ObservableObject {
     @Published var rotation: Double = 0
     
     func spinWheel(translation: CGSize) {
-        // Adjust rotation based on drag
         rotation += Double(translation.width) * 0.1
     }
 }
